@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#075b62">
+  <meta name="description" content="毎週土曜のランニングを記録するALOHA SATURDAYデジタルスタンプカード">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ALOHA STAMP">
+  <link rel="manifest" href="data:application/manifest+json;charset=UTF-8,%7B%22name%22%3A%22ALOHA%20SATURDAY%20STAMP%20CARD%22%2C%22short_name%22%3A%22ALOHA%20STAMP%22%2C%22description%22%3A%22RUNNER%27S%20ROUTE%20JP%20/%20808FIVE-DONUTS%E3%81%AE%E5%8F%82%E5%8A%A0%E8%A8%98%E5%BF%B5%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%82%AB%E3%83%BC%E3%83%89%22%2C%22id%22%3A%22./aloha-stamp-card.html%22%2C%22start_url%22%3A%22./aloha-stamp-card.html%22%2C%22scope%22%3A%22./%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23f4e8d0%22%2C%22theme_color%22%3A%22%23075b62%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage/svg%2Bxml%3Bcharset%3DUTF-8%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%250A%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%252292%2522%2520fill%253D%2522%2523075b62%2522/%253E%250A%253Cpath%2520d%253D%2522M42%2520390c78-44%2520136-34%2520214%25204%252080%252039%2520137%252046%2520214%25202%2522%2520fill%253D%2522none%2522%2520stroke%253D%2522%2523e97868%2522%2520stroke-width%253D%252218%2522%2520stroke-linecap%253D%2522round%2522/%253E%250A%253Ccircle%2520cx%253D%2522256%2522%2520cy%253D%2522220%2522%2520r%253D%2522126%2522%2520fill%253D%2522%2523f4c85b%2522%2520opacity%253D%2522.96%2522/%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522203%2522%2520text-anchor%253D%2522middle%2522%2520font-family%253D%2522Georgia%252Cserif%2522%2520font-size%253D%252268%2522%2520font-weight%253D%2522700%2522%2520fill%253D%2522%2523075b62%2522%253EALOHA%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522275%2522%2520text-anchor%253D%2522middle%2522%2520font-family%253D%2522Arial%252Csans-serif%2522%2520font-size%253D%252238%2522%2520font-weight%253D%2522700%2522%2520letter-spacing%253D%25225%2522%2520fill%253D%2522%2523075b62%2522%253ESATURDAY%253C/text%253E%250A%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522339%2522%2520text-anchor%253D%2522middle%2522%2520font-family%253D%2522Arial%252Csans-serif%2522%2520font-size%253D%252231%2522%2520font-weight%253D%2522700%2522%2520letter-spacing%253D%25224%2522%2520fill%253D%2522%2523fffdf7%2522%253ESTAMP%253C/text%253E%250A%253C/svg%253E%22%2C%22sizes%22%3A%22any%22%2C%22type%22%3A%22image/svg%2Bxml%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%0A%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%2292%22%20fill%3D%22%23075b62%22/%3E%0A%3Cpath%20d%3D%22M42%20390c78-44%20136-34%20214%204%2080%2039%20137%2046%20214%202%22%20fill%3D%22none%22%20stroke%3D%22%23e97868%22%20stroke-width%3D%2218%22%20stroke-linecap%3D%22round%22/%3E%0A%3Ccircle%20cx%3D%22256%22%20cy%3D%22220%22%20r%3D%22126%22%20fill%3D%22%23f4c85b%22%20opacity%3D%22.96%22/%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22203%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2268%22%20font-weight%3D%22700%22%20fill%3D%22%23075b62%22%3EALOHA%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22275%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22700%22%20letter-spacing%3D%225%22%20fill%3D%22%23075b62%22%3ESATURDAY%3C/text%3E%0A%3Ctext%20x%3D%22256%22%20y%3D%22339%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2231%22%20font-weight%3D%22700%22%20letter-spacing%3D%224%22%20fill%3D%22%23fffdf7%22%3ESTAMP%3C/text%3E%0A%3C/svg%3E">
+  <title>ALOHA SATURDAY STAMP CARD</title>
+  <style>
+    :root {
+      --teal: #075b62;
+      --teal-dark: #153e42;
+      --coral: #e97868;
+      --yellow: #f4c85b;
+      --sand: #f4e8d0;
+      --paper: #fffdf7;
+      --aqua: #dceDE8;
+      --ink: #19383b;
+      --muted: #6f746d;
+      --line: #d8c9ad;
+      --shadow: 0 8px 22px rgba(21, 62, 66, .11);
+    }
+    * { box-sizing: border-box; }
+    html { min-width: 320px; background: var(--sand); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(244,200,91,.28) 0 3px, transparent 4px),
+        radial-gradient(circle at 88% 27%, rgba(233,120,104,.17) 0 4px, transparent 5px),
+        linear-gradient(180deg, #f9efdd 0%, var(--sand) 56%, #efdfc4 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.55;
+    }
+    button, input { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, input:focus-visible { outline: 3px solid rgba(233,120,104,.55); outline-offset: 2px; }
+    .app-shell { width: min(100%, 430px); min-height: 100svh; margin: 0 auto; padding: 15px 15px calc(28px + env(safe-area-inset-bottom)); }
+    .brand-cover {
+      position: relative; overflow: hidden; color: var(--paper); text-align: center;
+      padding: 18px 15px 20px; border-radius: 20px 20px 7px 7px;
+      background: var(--teal); box-shadow: 0 5px 0 var(--teal-dark), var(--shadow);
+    }
+    .brand-cover::before, .brand-cover::after { content: ""; position: absolute; border: 1px solid rgba(255,253,247,.32); border-radius: 50%; transform: rotate(-10deg); pointer-events: none; }
+    .brand-cover::before { width: 170px; height: 55px; left: -54px; bottom: 8px; }
+    .brand-cover::after { width: 190px; height: 60px; right: -65px; top: 8px; }
+    .brand-kicker { position: relative; z-index: 1; margin: 0 0 5px; font-size: 11px; letter-spacing: .16em; font-weight: 800; }
+    .brand-cover h1 { position: relative; z-index: 1; margin: 0; color: var(--yellow); font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif; font-size: clamp(25px, 7.5vw, 33px); line-height: 1.05; letter-spacing: .07em; }
+    .brand-subtitle { position: relative; z-index: 1; margin: 7px 0 0; font-size: 12px; letter-spacing: .2em; font-weight: 700; }
+    .brand-location { position: relative; z-index: 1; margin: 11px 0 0; color: #fff7e6; font-size: 11px; }
+    .wave-rule { height: 8px; margin: 15px 4px 0; background: radial-gradient(12px 6px at 12px 0, transparent 11px, var(--yellow) 12px, transparent 13px) 0 0/24px 8px repeat-x; opacity: .95; }
+    .view { margin-top: 16px; }
+    .hidden { display: none !important; }
+    .paper-card {
+      padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper); box-shadow: var(--shadow);
+      background-image: linear-gradient(90deg, transparent 97%, rgba(117,91,49,.045) 98%), linear-gradient(0deg, transparent 97%, rgba(117,91,49,.035) 98%);
+      background-size: 15px 15px;
+    }
+    .paper-card + .paper-card { margin-top: 14px; }
+    h2, h3 { margin: 0 0 10px; font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif; color: var(--teal); letter-spacing: .04em; }
+    h2 { font-size: 21px; }
+    h3 { font-size: 18px; }
+    p { margin: 8px 0; }
+    .small { color: var(--muted); font-size: 12px; }
+    .privacy-note { padding: 10px 12px; border-left: 4px solid var(--yellow); border-radius: 7px; background: #fff4cf; color: #5c513b; font-size: 12px; }
+    label { display: block; margin: 14px 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .04em; }
+    input[type="text"], input[type="password"], input[type="date"], input[type="url"] {
+      width: 100%; min-height: 48px; border: 2px solid var(--line); border-radius: 10px; padding: 10px 12px; color: var(--ink); background: #fffefa; font-size: 16px;
+    }
+    input.code-input { text-transform: uppercase; letter-spacing: .22em; font-weight: 800; text-align: center; }
+    .button-row { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 12px; }
+    .btn { width: 100%; min-height: 48px; border: 0; border-radius: 999px; padding: 11px 16px; cursor: pointer; font-size: 15px; font-weight: 800; letter-spacing: .02em; transition: transform .15s ease, filter .15s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn:hover { filter: brightness(1.03); }
+    .btn-primary { color: var(--paper); background: var(--coral); box-shadow: 0 3px 0 #b84f42; }
+    .btn-secondary { color: var(--teal); background: transparent; border: 2px solid var(--teal); }
+    .btn-yellow { color: var(--teal-dark); background: var(--yellow); box-shadow: 0 3px 0 #c39b33; }
+    .btn-small { min-height: 40px; padding: 8px 12px; font-size: 13px; }
+    .passport-label { color: var(--muted); font-size: 10px; font-weight: 900; letter-spacing: .18em; }
+    .profile-name { margin-top: 3px; color: var(--teal); font-size: 24px; font-weight: 900; overflow-wrap: anywhere; }
+    .profile-meta { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-top: 13px; }
+    .level-name { color: var(--coral); font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif; font-size: 18px; font-weight: 800; line-height: 1.25; }
+    .stamp-total { color: var(--teal); font-size: 14px; font-weight: 900; white-space: nowrap; }
+    .progress-track { height: 11px; margin: 12px 0 17px; overflow: hidden; border-radius: 99px; background: #eadcc2; box-shadow: inset 0 1px 2px rgba(21,62,66,.12); }
+    .progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--coral), var(--yellow)); transition: width .35s ease; }
+    .stamp-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; }
+    .stamp-slot { position: relative; display: grid; place-items: center; min-width: 0; aspect-ratio: 1; overflow: hidden; border: 2px dashed #cdbd9f; border-radius: 43% 57% 50% 48%; color: #aa9c83; background: rgba(255,253,247,.68); transform: rotate(-2deg); }
+    .stamp-slot:nth-child(even) { transform: rotate(2deg); border-radius: 52% 47% 42% 58%; }
+    .stamp-slot.filled { border: 2px solid transparent; background: #fff2cf; color: var(--teal); animation: stamp-in .4s ease both; }
+    .stamp-slot.filled:nth-child(3n) { transform: rotate(-4deg); }
+    .stamp-slot svg { width: 88%; height: 88%; overflow: visible; filter: url(#stampWobble); }
+    .stamp-slot .empty-number { font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+    .stamp-slot .stamp-date { font-size: 7px; font-weight: 800; letter-spacing: 0; }
+    @keyframes stamp-in { from { opacity: 0; transform: scale(1.45) rotate(13deg); } to { opacity: 1; } }
+    .status-message { margin-top: 12px; padding: 11px 12px; border-radius: 9px; background: var(--aqua); color: var(--teal-dark); font-size: 13px; font-weight: 700; }
+    .status-message.error { background: #ffe6df; color: #8b372d; }
+    .status-message.success { background: #fff1be; color: #664f1a; }
+    .reward-list { display: grid; gap: 8px; }
+    .reward { display: flex; gap: 9px; align-items: flex-start; padding: 11px 12px; border: 1px solid #eadbc0; border-radius: 9px; background: #fffaf0; font-size: 13px; }
+    .reward .reward-icon { flex: 0 0 auto; font-size: 20px; line-height: 1.1; }
+    .reward.is-achieved { border-color: var(--coral); background: #fff0e9; }
+    .reward.is-locked { color: #7c776d; }
+    .code-display { margin: 14px 0; padding: 16px 10px; border: 2px dashed var(--coral); border-radius: 12px; color: var(--teal); background: #fff3c7; text-align: center; font-size: 33px; font-weight: 900; letter-spacing: .16em; }
+    .admin-tip { margin: 10px 0 0; padding: 10px 12px; border-radius: 8px; background: #eef4ef; color: var(--teal-dark); font-size: 12px; }
+    .qr-output { display: grid; place-items: center; min-height: 100px; margin-top: 14px; padding: 16px; border-radius: 10px; background: #fff; }
+    .qr-output canvas { display: block; width: min(100%, 280px); height: auto; image-rendering: pixelated; }
+    .install-banner { position: fixed; z-index: 50; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); left: 12px; width: auto; padding: 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 15px; color: var(--paper); background: var(--teal-dark); box-shadow: 0 8px 25px rgba(0,0,0,.25); }
+    .install-banner strong { display: block; margin-bottom: 3px; color: var(--yellow); font-family: Georgia, serif; font-size: 17px; }
+    .install-banner p { margin: 0; font-size: 12px; }
+    .install-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 9px; }
+    .install-actions .btn { min-height: 40px; padding: 8px 10px; font-size: 12px; }
+    .app-footer { margin: 20px 0 4px; color: #807765; text-align: center; font-size: 10px; letter-spacing: .05em; }
+    .app-footer strong { color: var(--teal); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-width: 360px) { .app-shell { padding-inline: 11px; } .paper-card { padding: 15px; } .stamp-grid { gap: 6px; } .profile-meta { align-items: flex-start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><filter id="stampWobble"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.35" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
+  <main class="app-shell">
+    <header class="brand-cover">
+      <p class="brand-kicker">RUNNERS ROUTE JP</p>
+      <h1>ALOHA SATURDAY</h1>
+      <div class="brand-subtitle">DIGITAL STAMP CARD</div>
+      <p class="brand-location">清澄白河 808FIVE-DONUTS</p>
+      <div class="wave-rule" aria-hidden="true"></div>
+    </header>
+
+    <section id="welcomeView" class="view">
+      <div class="paper-card">
+        <h2>土曜の朝の旅をはじめよう</h2>
+        <p>ニックネームだけで、参加記念スタンプカードを作れます。</p>
+        <div class="privacy-note">本名・メールアドレス・電話番号は入力しないでください。</div>
+        <label for="nicknameInput">ニックネーム</label>
+        <input id="nicknameInput" type="text" maxlength="20" autocomplete="nickname" placeholder="例：ALOHA RUNNER">
+        <div class="button-row">
+          <button id="startButton" class="btn btn-primary">カードをはじめる</button>
+          <button id="restoreButton" class="btn btn-secondary">保存済みの記録を復元する</button>
+          <button id="openAdminButton" class="btn btn-secondary">主催者画面</button>
+        </div>
+        <div id="welcomeMessage" class="status-message hidden" role="status" aria-live="polite"></div>
+      </div>
+      <div class="app-footer">ALOHA SATURDAY STAMP CARD · <strong>v1.2.0</strong></div>
+    </section>
+
+    <section id="participantView" class="view hidden">
+      <div class="paper-card">
+        <div class="passport-label">PARTICIPANT</div>
+        <div id="displayNickname" class="profile-name"></div>
+        <div class="profile-meta">
+          <div><div class="passport-label">CURRENT STATUS</div><div id="levelText" class="level-name"></div></div>
+          <div id="stampCount" class="stamp-total"></div>
+        </div>
+        <div class="progress-track" aria-hidden="true"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+        <div id="stampGrid" class="stamp-grid" aria-label="スタンプカード"></div>
+      </div>
+
+      <div class="paper-card">
+        <h2>Today's Run Code</h2>
+        <p class="small">会場で発表された本日の参加コードを入力してください。</p>
+        <label for="participationCode">参加コード（英数字6文字）</label>
+        <input id="participationCode" class="code-input" type="text" maxlength="6" inputmode="text" autocapitalize="characters" autocomplete="one-time-code" placeholder="AB12CD">
+        <button id="stampButton" class="btn btn-primary">スタンプを押す</button>
+        <div id="participantMessage" class="status-message hidden" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="paper-card">
+        <h2>Rewards</h2>
+        <div id="rewardList" class="reward-list"></div>
+      </div>
+      <button id="switchUserButton" class="btn btn-secondary">別のニックネームに切り替える</button>
+      <div class="app-footer">RUNNERS ROUTE JP · <strong>ALOHA SATURDAY STAMP CARD v1.2.0</strong></div>
+    </section>
+
+    <section id="adminView" class="view hidden">
+      <div class="paper-card">
+        <div class="passport-label">ORGANIZER PASSPORT</div>
+        <h2>主催者画面</h2>
+        <p class="small">参加コードは、会場スタッフだけが確認してください。</p>
+        <label for="adminPasscode">管理者パスコード</label>
+        <input id="adminPasscode" type="password" autocomplete="off" placeholder="パスコード">
+        <button id="adminLoginButton" class="btn btn-primary">ログイン</button>
+        <div id="adminLoginMessage" class="status-message hidden" role="alert"></div>
+      </div>
+
+      <div id="adminPanel" class="paper-card hidden">
+        <h2>本日の参加コード</h2>
+        <label for="adminDate">日付（日本時間）</label>
+        <input id="adminDate" type="date">
+        <button id="showCodeButton" class="btn btn-yellow">この日のコードを表示</button>
+        <div id="adminCode" class="code-display hidden" aria-live="polite"></div>
+        <div class="admin-tip">参加コードは「秘密の合言葉 + | + 日付（YYYY-MM-DD）」をSHA-256化し、先頭6文字を大文字にしたものです。</div>
+        <div class="admin-tip" style="margin-top:12px"><strong>登録人数（この端末）</strong><div id="localProfileCount" style="margin:4px 0;color:var(--teal);font-size:26px;font-weight:900">0人</div><div>この人数は主催者の端末・同じブラウザ内に保存されたプロフィール数です。参加者全体の人数ではありません。</div><button id="refreshProfileCountButton" class="btn btn-secondary btn-small" style="margin-top:8px">人数を更新</button></div>
+
+        <h2 style="margin-top:22px">参加登録QRコード</h2>
+        <p class="small">現在のページURLが初期入力されます。別のURLを入力して作り直すこともできます。</p>
+        <label for="qrUrl">QRコードのリンク先URL</label>
+        <input id="qrUrl" type="url" inputmode="url" placeholder="https://example.com/aloha-stamp-card.html">
+        <button id="makeQrButton" class="btn btn-primary">QRコードを生成</button>
+        <div id="qrMessage" class="status-message hidden" role="alert"></div>
+        <div id="qrOutput" class="qr-output" aria-live="polite"><span class="small">ここにQRコードが表示されます</span></div>
+        <button id="downloadQrButton" class="btn btn-secondary hidden">QR画像をダウンロード</button>
+      </div>
+      <button id="backButton" class="btn btn-secondary">参加者画面に戻る</button>
+      <div class="app-footer">ORGANIZER VIEW · <strong>ALOHA SATURDAY STAMP CARD v1.2.0</strong></div>
+    </section>
+  </main>
+
+  <aside id="installBanner" class="install-banner hidden" aria-live="polite">
+    <strong>ALOHA STAMPをいつでも</strong>
+    <p id="installText">ホーム画面に追加すると、アプリのように使えます。</p>
+    <div class="install-actions"><button id="installButton" class="btn btn-yellow">ホーム画面に追加</button><button id="dismissInstallButton" class="btn btn-secondary" style="color:#fff;border-color:#fff">あとで</button></div>
+  </aside>
+
+  <script>
+/* Self-contained QR Code generator (QR Model 2, byte mode, ECC-L, versions 1-9). */
+const QRCode = (() => {
+  const SPECS = {
+    1: { total: 26, ec: 7, groups: [[1, 19]] },
+    2: { total: 44, ec: 10, groups: [[1, 34]] },
+    3: { total: 70, ec: 15, groups: [[1, 55]] },
+    4: { total: 100, ec: 20, groups: [[1, 80]] },
+    5: { total: 134, ec: 26, groups: [[1, 108]] },
+    6: { total: 172, ec: 18, groups: [[2, 68]] },
+    7: { total: 196, ec: 20, groups: [[2, 78]] },
+    8: { total: 242, ec: 24, groups: [[2, 97]] },
+    9: { total: 292, ec: 30, groups: [[2, 116]] }
+  };
+  const ALIGNMENT = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46]];
+
+  function bchDigit(data) {
+    let digit = 0;
+    while (data !== 0) { digit++; data >>>= 1; }
+    return digit;
+  }
+  function bchTypeInfo(data) {
+    let d = data << 10;
+    const g = 0x537;
+    while (bchDigit(d) >= bchDigit(g)) d ^= g << (bchDigit(d) - bchDigit(g));
+    return ((data << 10) | d) ^ 0x5412;
+  }
+  function bchVersion(data) {
+    let d = data << 12;
+    const g = 0x1f25;
+    while (bchDigit(d) >= bchDigit(g)) d ^= g << (bchDigit(d) - bchDigit(g));
+    return (data << 12) | d;
+  }
+  function gfMul(x, y) {
+    let z = 0;
+    while (y) {
+      if (y & 1) z ^= x;
+      y >>>= 1;
+      x <<= 1;
+      if (x & 0x100) x ^= 0x11d;
+      x &= 0xff;
+    }
+    return z;
+  }
+  function gfPow2(exp) {
+    let z = 1;
+    for (let i = 0; i < exp; i++) z = gfMul(z, 2);
+    return z;
+  }
+  function rsGenerator(degree) {
+    let poly = [1];
+    for (let i = 0; i < degree; i++) {
+      const next = new Array(poly.length + 1).fill(0);
+      const alpha = gfPow2(i);
+      for (let j = 0; j < poly.length; j++) {
+        next[j] ^= poly[j];
+        next[j + 1] ^= gfMul(poly[j], alpha);
+      }
+      poly = next;
+    }
+    return poly;
+  }
+  function rsRemainder(data, degree) {
+    const gen = rsGenerator(degree);
+    const rem = new Array(degree).fill(0);
+    for (const value of data) {
+      const factor = value ^ rem[0];
+      rem.shift();
+      rem.push(0);
+      for (let i = 0; i < degree; i++) rem[i] ^= gfMul(gen[i + 1], factor);
+    }
+    return rem;
+  }
+  function appendBits(bits, value, length) {
+    for (let i = length - 1; i >= 0; i--) bits.push((value >>> i) & 1);
+  }
+  function bytesFromText(text) {
+    return Array.from(new TextEncoder().encode(text));
+  }
+  function createCodewords(version, dataBytes) {
+    const spec = SPECS[version];
+    const dataCapacity = spec.groups.reduce((sum, group) => sum + group[0] * group[1], 0);
+    const countBits = version <= 9 ? 8 : 16;
+    const bits = [];
+    appendBits(bits, 0b0100, 4);
+    appendBits(bits, dataBytes.length, countBits);
+    for (const byte of dataBytes) appendBits(bits, byte, 8);
+    if (bits.length > dataCapacity * 8) throw new Error('QR_DATA_TOO_LONG');
+    appendBits(bits, 0, Math.min(4, dataCapacity * 8 - bits.length));
+    while (bits.length % 8) bits.push(0);
+    const data = [];
+    for (let i = 0; i < bits.length; i += 8) {
+      let value = 0;
+      for (let j = 0; j < 8; j++) value = (value << 1) | bits[i + j];
+      data.push(value);
+    }
+    let pad = 0;
+    while (data.length < dataCapacity) data.push((pad++ % 2) ? 0x11 : 0xec);
+
+    const blocks = [];
+    let offset = 0;
+    for (const [count, dataCount] of spec.groups) {
+      for (let i = 0; i < count; i++) {
+        const blockData = data.slice(offset, offset + dataCount);
+        offset += dataCount;
+        blocks.push({ data: blockData, ecc: rsRemainder(blockData, spec.ec) });
+      }
+    }
+    const result = [];
+    const maxData = Math.max(...blocks.map(block => block.data.length));
+    const maxEcc = Math.max(...blocks.map(block => block.ecc.length));
+    for (let i = 0; i < maxData; i++) for (const block of blocks) if (i < block.data.length) result.push(block.data[i]);
+    for (let i = 0; i < maxEcc; i++) for (const block of blocks) if (i < block.ecc.length) result.push(block.ecc[i]);
+    if (result.length !== spec.total) throw new Error('QR_BLOCK_LENGTH');
+    return result;
+  }
+  function maskBit(mask, row, col) {
+    switch (mask) {
+      case 0: return (row + col) % 2 === 0;
+      case 1: return row % 2 === 0;
+      case 2: return col % 3 === 0;
+      case 3: return (row + col) % 3 === 0;
+      case 4: return (Math.floor(row / 2) + Math.floor(col / 3)) % 2 === 0;
+      case 5: return (row * col) % 2 + (row * col) % 3 === 0;
+      case 6: return ((row * col) % 2 + (row * col) % 3) % 2 === 0;
+      case 7: return ((row + col) % 2 + (row * col) % 3) % 2 === 0;
+      default: throw new Error('QR_MASK');
+    }
+  }
+  function makeMatrix(version, codewords, mask) {
+    const size = version * 4 + 17;
+    const modules = Array.from({ length: size }, () => Array(size).fill(false));
+    const isFunction = Array.from({ length: size }, () => Array(size).fill(false));
+    const setFunction = (row, col, dark) => {
+      if (row >= 0 && row < size && col >= 0 && col < size) {
+        modules[row][col] = !!dark;
+        isFunction[row][col] = true;
+      }
+    };
+    const finder = (row, col) => {
+      for (let dy = -1; dy <= 7; dy++) {
+        for (let dx = -1; dx <= 7; dx++) {
+          const r = row + dy, c = col + dx;
+          const dark = (0 <= dy && dy <= 6 && (dx === 0 || dx === 6)) ||
+            (0 <= dx && dx <= 6 && (dy === 0 || dy === 6)) ||
+            (2 <= dy && dy <= 4 && 2 <= dx && dx <= 4);
+          setFunction(r, c, dark);
+        }
+      }
+    };
+    finder(0, 0); finder(size - 7, 0); finder(0, size - 7);
+    for (let i = 8; i < size - 8; i++) {
+      if (!isFunction[6][i]) setFunction(6, i, i % 2 === 0);
+      if (!isFunction[i][6]) setFunction(i, 6, i % 2 === 0);
+    }
+    const positions = ALIGNMENT[version - 1];
+    for (const row of positions) for (const col of positions) {
+      if (isFunction[row][col]) continue;
+      for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++)
+        setFunction(row + dy, col + dx, Math.max(Math.abs(dx), Math.abs(dy)) !== 1);
+    }
+    for (let i = 0; i < 15; i++) {
+      if (i < 6) setFunction(i, 8, false);
+      else if (i < 8) setFunction(i + 1, 8, false);
+      else setFunction(size - 15 + i, 8, false);
+      if (i < 8) setFunction(8, size - i - 1, false);
+      else if (i < 9) setFunction(8, 15 - i, false);
+      else setFunction(8, 15 - i - 1, false);
+    }
+    setFunction(size - 8, 8, true);
+    if (version >= 7) {
+      const bits = bchVersion(version);
+      for (let i = 0; i < 18; i++) {
+        const bit = ((bits >>> i) & 1) !== 0;
+        setFunction(Math.floor(i / 3), i % 3 + size - 11, bit);
+        setFunction(i % 3 + size - 11, Math.floor(i / 3), bit);
+      }
+    }
+    const dataBits = [];
+    for (const byte of codewords) appendBits(dataBits, byte, 8);
+    let bitIndex = 0;
+    let upward = true;
+    for (let right = size - 1; right >= 1; right -= 2) {
+      if (right === 6) right--;
+      for (let vert = 0; vert < size; vert++) {
+        const row = upward ? size - 1 - vert : vert;
+        for (let j = 0; j < 2; j++) {
+          const col = right - j;
+          if (!isFunction[row][col]) {
+            let dark = bitIndex < dataBits.length ? dataBits[bitIndex++] === 1 : false;
+            if (maskBit(mask, row, col)) dark = !dark;
+            modules[row][col] = dark;
+          }
+        }
+      }
+      upward = !upward;
+    }
+    const format = bchTypeInfo((1 << 3) | mask); // ECC-L is 01.
+    for (let i = 0; i < 15; i++) {
+      const bit = ((format >>> i) & 1) !== 0;
+      if (i < 6) modules[i][8] = bit;
+      else if (i < 8) modules[i + 1][8] = bit;
+      else modules[size - 15 + i][8] = bit;
+      if (i < 8) modules[8][size - i - 1] = bit;
+      else if (i < 9) modules[8][15 - i] = bit;
+      else modules[8][15 - i - 1] = bit;
+    }
+    return modules;
+  }
+  function penalty(matrix) {
+    const size = matrix.length;
+    let score = 0;
+    const addRuns = line => {
+      let runColor = line[0], runLength = 1;
+      for (let i = 1; i < line.length; i++) {
+        if (line[i] === runColor) runLength++;
+        else { if (runLength >= 5) score += 3 + runLength - 5; runColor = line[i]; runLength = 1; }
+      }
+      if (runLength >= 5) score += 3 + runLength - 5;
+    };
+    for (let r = 0; r < size; r++) addRuns(matrix[r]);
+    for (let c = 0; c < size; c++) addRuns(matrix.map(row => row[c]));
+    for (let r = 0; r < size - 1; r++) for (let c = 0; c < size - 1; c++) {
+      const v = matrix[r][c];
+      if (v === matrix[r + 1][c] && v === matrix[r][c + 1] && v === matrix[r + 1][c + 1]) score += 3;
+    }
+    const finderLike = line => {
+      for (let i = 0; i <= line.length - 11; i++) {
+        const a = line.slice(i, i + 11);
+        const before = a.slice(0, 4).every(v => !v);
+        const after = a.slice(7, 11).every(v => !v);
+        const core = a.slice(4, 7).every(v => v);
+        if (core && !a[3] && !a[7] && ((before) || (after))) score += 40;
+      }
+    };
+    for (let r = 0; r < size; r++) finderLike(matrix[r]);
+    for (let c = 0; c < size; c++) finderLike(matrix.map(row => row[c]));
+    let dark = 0;
+    for (const row of matrix) for (const cell of row) if (cell) dark++;
+    score += Math.floor(Math.abs(dark * 20 - size * size * 10) / (size * size)) * 10;
+    return score;
+  }
+  function make(text) {
+    const dataBytes = bytesFromText(text);
+    let version = 1;
+    for (; version <= 9; version++) {
+      const capacity = SPECS[version].groups.reduce((sum, group) => sum + group[0] * group[1], 0);
+      if (4 + 8 + dataBytes.length * 8 <= capacity * 8) break;
+    }
+    if (version > 9) throw new Error('QR_URL_TOO_LONG');
+    const codewords = createCodewords(version, dataBytes);
+    let best = null, bestScore = Infinity;
+    for (let mask = 0; mask < 8; mask++) {
+      const matrix = makeMatrix(version, codewords, mask);
+      const score = penalty(matrix);
+      if (score < bestScore) { bestScore = score; best = matrix; }
+    }
+    return best;
+  }
+  function render(text, canvas, options = {}) {
+    const matrix = make(text);
+    const scale = options.scale || 6;
+    const quiet = options.quiet == null ? 4 : options.quiet;
+    const size = matrix.length;
+    canvas.width = canvas.height = (size + quiet * 2) * scale;
+    const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = options.background || '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = options.foreground || '#111827';
+    for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
+      if (matrix[r][c]) ctx.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+    }
+    return canvas;
+  }
+  return { render };
+})();
+    'use strict';
+    const APP_VERSION = '1.2.0';
+    /*
+      運用開始前に、以下2つは必ず主催者用の値へ変更してください。
+      ※静的HTMLへ埋め込む以上、ソースを取得できる人には見えるため、金銭的価値の高い認証には使わないでください。
+    */
+    const SECRET_PHRASE = 'ALOHA-SATURDAY-808FIVE-DONUTS-2026-CHANGE-BEFORE-PUBLISH';
+    const ADMIN_PASSCODE = 'ALOHA8085';
+    const STORAGE_PREFIX = 'aloha-saturday-stamp-card.v1';
+    const PROFILE_LAST_KEY = STORAGE_PREFIX + '.lastProfile';
+    const DISMISS_KEY = STORAGE_PREFIX + '.installDismissed';
+    const CUSTOM_LOGO_DATA_URI = ''; // PNG/SVGのdata URIを入れると、アイコンを正式ロゴへ差し替えできます。
+
+    const LEVELS = [
+      'Lv.1 ワイキキ・ビギナー',
+      'Lv.2 ダイヤモンドヘッド・ウォーカー',
+      'Lv.3 カイルア・ランナー',
+      'Lv.4 ノースショア・チャレンジャー',
+      'Lv.5 マウナルア・クルーザー',
+      'Lv.6 ハナウマ・トレッカー',
+      'Lv.7 カカアコ・パイオニア',
+      'Lv.8 パールハーバー・レジェンド',
+      'Lv.9 ダイヤモンドヘッド・チャンピオン',
+      'Lv.10 ホノルルマラソン・マスター'
+    ];
+const MOTIFS = [
+      { key:'turtle', label:'ホヌ', symbol:'🐢', color:'#075b62' },
+      { key:'pineapple', label:'パイナップル', symbol:'🍍', color:'#e0a52b' },
+      { key:'rainbow', label:'虹', symbol:'🌈', color:'#e97868' },
+      { key:'hibiscus', label:'ハイビスカス', symbol:'🌺', color:'#e97868' },
+      { key:'palm', label:'ヤシの木', symbol:'🌴', color:'#075b62' },
+      { key:'shaka', label:'シャカサイン', symbol:'🤙', color:'#e0a52b' },
+      { key:'plumeria', label:'プルメリア', symbol:'🌼', color:'#e97868' },
+      { key:'hibiscus_leaf', label:'ハイビスカスの葉', symbol:'🍃', color:'#075b62' },
+      { key:'wave', label:'波', symbol:'🌊', color:'#075b62' },
+      { key:'sunrise', label:'朝日', symbol:'🌅', color:'#e97868' },
+      { key:'surfboard', label:'サーフボード', symbol:'🏄', color:'#e97868' },
+      { key:'canoe', label:'カヌー', symbol:'🛶', color:'#075b62' },
+      { key:'ukulele', label:'ウクレレ', symbol:'🎸', color:'#e0a52b' },
+      { key:'coconut', label:'ココナッツ', symbol:'🥥', color:'#075b62' },
+      { key:'whale_tail', label:'クジラの尾', symbol:'🐋', color:'#075b62' },
+      { key:'flamingo', label:'フラミンゴ', symbol:'🦩', color:'#e97868' },
+      { key:'running_shoes', label:'ランニングシューズ', symbol:'👟', color:'#e97868' },
+      { key:'route_map_pin', label:'ルートマップピン', symbol:'📍', color:'#e97868' },
+      { key:'tokyo_bridge', label:'東京の橋', symbol:'🌉', color:'#075b62' },
+      { key:'tropical_drink', label:'トロピカルドリンク', symbol:'🍹', color:'#e0a52b' }
+    ];
+    let profile = null;
+    let deferredInstallPrompt = null;
+    let qrCanvas = null;
+    const $ = id => document.getElementById(id);
+
+    function getJapanDateString(date = new Date()) {
+      const parts = new Intl.DateTimeFormat('en-US', { timeZone:'Asia/Tokyo', year:'numeric', month:'2-digit', day:'2-digit' }).formatToParts(date);
+      const map = Object.fromEntries(parts.map(p => [p.type, p.value]));
+      return `${map.year}-${map.month}-${map.day}`;
+    }
+    function normalizeNickname(value) { return value.trim().replace(/\s+/g, ' '); }
+    function profileKey(nickname) { return STORAGE_PREFIX + '.profile.' + encodeURIComponent(nickname.toLocaleLowerCase('ja-JP')); }
+    function loadProfile(nickname) { const raw = localStorage.getItem(profileKey(nickname)); return raw ? JSON.parse(raw) : null; }
+    function createProfile(nickname) { return { nickname, stamps: [], usedDates: {}, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() }; }
+    function saveProfile() { if (!profile) return; profile.updatedAt = new Date().toISOString(); localStorage.setItem(profileKey(profile.nickname), JSON.stringify(profile)); localStorage.setItem(PROFILE_LAST_KEY, profile.nickname); }
+    function setMessage(id, text, type='normal') { const el = $(id); el.textContent = text; el.className = 'status-message ' + type; }
+    function hideMessage(id) { $(id).classList.add('hidden'); }
+    async function sha256Hex(text) { const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)); return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2,'0')).join('').toUpperCase(); }
+    async function participationCode(dateString) { return (await sha256Hex(SECRET_PHRASE + '|' + dateString)).slice(0, 6); }
+    function currentLevel(count) { return count ? LEVELS[Math.min(count, 10) - 1] : 'カードをはじめよう'; }
+    function randomMotif() { return MOTIFS[Math.floor(Math.random() * MOTIFS.length)]; }
+    function motifByKey(key) { return MOTIFS.find(m => m.key === key) || MOTIFS[0]; }
+
+    function motifSvg(motif, date, index) {
+      const color = motif.color;
+      const shapes = {
+        turtle: `<path d="M50 24c-9 0-17 7-17 16 0 5 2 9 6 12-5 7-4 14 2 17 5 3 10-1 9-8 0 0 0 0 0 0 0 7 4 11 9 8 5-3 7-10 2-17 4-3 6-7 6-12 0-9-8-16-17-16Z" fill="none" stroke="${color}" stroke-width="3"/><circle cx="44" cy="38" r="2" fill="${color}"/><circle cx="56" cy="38" r="2" fill="${color}"/><path d="M45 48h10M50 25v-6M34 32l-7-5M66 32l7-5" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round"/>`,
+        pineapple: `<path d="M50 28c-8-6-9-14-8-18 6 2 10 6 11 12 2-7 7-11 13-13 0 8-3 14-10 19" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round"/><path d="M34 34c0-7 7-11 16-11s16 4 16 11v21c0 8-7 13-16 13s-16-5-16-13V34Z" fill="none" stroke="${color}" stroke-width="3"/><path d="M36 39l28 23M34 50l23 18M64 39L36 62M66 50L43 68" fill="none" stroke="${color}" stroke-width="2"/>`,
+        rainbow: `<path d="M24 63a26 26 0 0 1 52 0M31 63a19 19 0 0 1 38 0M38 63a12 12 0 0 1 24 0" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round"/><path d="M24 64v7M76 64v7" stroke="${color}" stroke-width="4" stroke-linecap="round"/>`,
+        hibiscus: `<path d="M50 42c-12-3-24 2-25-8-1-8 9-13 20-4-2-13 4-18 10-16 7 2 7 11 3 18 11-6 19-3 19 4 0 8-11 9-21 9 10 8 8 17 2 20-8 4-14-5-15-13-5 9-15 11-19 5-4-7 2-13 11-15Z" fill="none" stroke="${color}" stroke-width="3"/><circle cx="50" cy="43" r="5" fill="none" stroke="${color}" stroke-width="3"/><path d="M54 39l16-12" stroke="${color}" stroke-width="3" stroke-linecap="round"/>`,
+        palm: `<path d="M51 74V42M51 43c-9-9-17-9-25-6 6-8 16-11 25-5M51 42c7-11 16-14 25-12-6-7-15-10-24-4M51 43c-1-11-5-18-12-23 10 1 16 8 16 18M51 74l-10 7M51 74l12 7" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`,
+        shaka: `<path d="M42 67c-7-3-11-10-8-15l8-13c2-4 6-5 8-2l-5 10 3 2 9-20c2-4 6-4 8-1l-5 17 3 1 7-13c2-4 6-3 7 0l-7 18 3 1 5-7c2-3 6-1 6 2-3 9-8 18-16 22-7 4-14 3-21-2Z" fill="none" stroke="${color}" stroke-width="3" stroke-linejoin="round"/>`
+      };
+      return `<svg viewBox="0 0 100 100" role="img" aria-label="${motif.label}のスタンプ（${date}）"><path d="M50 7c12-2 23 3 32 9 10 7 12 18 9 29 4 13-1 26-10 35-9 9-23 12-35 11-14 2-27-4-35-14-8-10-8-24-5-35C3 31 8 18 19 12 29 6 39 8 50 7Z" fill="#fff3c8" stroke="${color}" stroke-width="3" stroke-dasharray="2 2"/>${shapes[motif.key] || `<text x="50" y="58" text-anchor="middle" font-size="34">${motif.symbol}</text>`}<text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="${color}">${motif.label}</text></svg>`;
+    }
+    function renderParticipant() {
+      if (!profile) return;
+      $('welcomeView').classList.add('hidden'); $('adminView').classList.add('hidden'); $('participantView').classList.remove('hidden');
+      const count = profile.stamps.length;
+      $('displayNickname').textContent = profile.nickname;
+      $('levelText').textContent = currentLevel(count);
+      $('stampCount').textContent = `STAMP ${count} / 10`;
+      $('progressFill').style.width = `${Math.min(count,10) * 10}%`;
+      const grid = $('stampGrid'); grid.innerHTML = '';
+      for (let i = 0; i < 10; i++) {
+        const cell = document.createElement('div');
+        const stamp = profile.stamps[i];
+        cell.className = 'stamp-slot' + (stamp ? ' filled' : '');
+        if (stamp) { const motif = motifByKey(stamp.motif); cell.innerHTML = motifSvg(motif, stamp.date, i); }
+        else { cell.innerHTML = `<span class="empty-number">${String(i+1).padStart(2,'0')}</span>`; cell.setAttribute('aria-label', `未獲得のスタンプ ${i+1}`); }
+        grid.appendChild(cell);
+      }
+      renderRewards(count);
+    }
+    function renderRewards(count) {
+      const list = $('rewardList'); list.innerHTML = '';
+      const rewards = [
+        { at:3, icon:'🌺', title:'Lv.2｜3〜5個', text:'ステッカープレゼント' },
+        { at:10, icon:'🎁', title:'10個達成', text:'オリジナルグッズプレゼント｜Lv.10 ホノルルマラソン・マスター！' }
+      ];
+      rewards.forEach(reward => {
+        const achieved = count >= reward.at;
+        const el = document.createElement('div'); el.className = 'reward ' + (achieved ? 'is-achieved' : 'is-locked');
+        el.innerHTML = `<div class="reward-icon" aria-hidden="true">${achieved ? '✓' : reward.icon}</div><div><strong>${reward.title}${achieved ? ' · ACHIEVED' : ''}</strong><br>${reward.text}${!achieved ? `<br><span class="small">あと${reward.at-count}個</span>` : ''}</div>`;
+        list.appendChild(el);
+      });
+    }
+    async function startOrRestore(mode) {
+      const nickname = normalizeNickname($('nicknameInput').value);
+      if (!nickname) { setMessage('welcomeMessage', 'ニックネームを入力してください。', 'error'); return; }
+      if (nickname.length > 20) { setMessage('welcomeMessage', 'ニックネームは20文字以内で入力してください。', 'error'); return; }
+      const saved = loadProfile(nickname);
+      if (mode === 'restore' && !saved) { setMessage('welcomeMessage', 'この端末・ブラウザには該当する記録がありません。', 'error'); return; }
+      profile = saved || createProfile(nickname); saveProfile();
+      hideMessage('welcomeMessage'); renderParticipant();
+    }
+    async function receiveStamp() {
+      if (!profile) return;
+      hideMessage('participantMessage');
+      const date = getJapanDateString();
+      const input = $('participationCode').value.trim().toUpperCase();
+      if (!/^[A-Z0-9]{6}$/.test(input)) { setMessage('participantMessage', '参加コードは英数字6文字で入力してください。', 'error'); return; }
+      if (profile.usedDates && profile.usedDates[date]) { setMessage('participantMessage', '本日のスタンプはすでに受け取り済みです。', 'error'); return; }
+      if (profile.stamps.length >= 10) { setMessage('participantMessage', '全10個のスタンプを達成済みです。おめでとうございます！', 'success'); return; }
+      const expected = await participationCode(date);
+      if (input !== expected) { setMessage('participantMessage', '参加コードが一致しません。会場で発表されたコードを確認してください。', 'error'); return; }
+      const motif = randomMotif();
+      profile.usedDates = profile.usedDates || {};
+      profile.usedDates[date] = expected;
+      profile.stamps.push({ date, motif: motif.key, codeHash: expected });
+      saveProfile(); $('participationCode').value = ''; renderParticipant();
+      const count = profile.stamps.length;
+      if (count === 10) setMessage('participantMessage', `🎉 ${motif.symbol} スタンプを受け取りました！全制覇、Lv.10 ホノルルマラソン・マスター達成です！`, 'success');
+      else if (count === 5) setMessage('participantMessage', `🎁 ${motif.symbol} ${motif.label}のスタンプを受け取りました。5個達成特典が解放されました！`, 'success');
+      else if (count === 3) setMessage('participantMessage', `🌺 ${motif.symbol} ${motif.label}のスタンプを受け取りました。3個達成特典が解放されました！`, 'success');
+      else setMessage('participantMessage', `${motif.symbol} ${motif.label}のスタンプを受け取りました！`, 'success');
+    }
+    function countLocalProfiles() {
+      let count = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key || !key.startsWith(STORAGE_PREFIX + '.profile.')) continue;
+        try { const saved = JSON.parse(localStorage.getItem(key)); if (saved && saved.nickname) count++; } catch (_) {}
+      }
+      return count;
+    }
+    function renderLocalProfileCount() { const el = $('localProfileCount'); if (el) el.textContent = `${countLocalProfiles()}人`; }
+    function showAdmin() { $('welcomeView').classList.add('hidden'); $('participantView').classList.add('hidden'); $('adminView').classList.remove('hidden'); $('adminDate').value = getJapanDateString(); $('qrUrl').value = (/^https?:$/i.test(location.protocol) ? location.href : ''); hideMessage('adminLoginMessage'); }
+    function showWelcome() { $('adminView').classList.add('hidden'); $('participantView').classList.add('hidden'); $('welcomeView').classList.remove('hidden'); }
+    async function loginAdmin() { if ($('adminPasscode').value === ADMIN_PASSCODE) { $('adminPanel').classList.remove('hidden'); $('adminPasscode').value=''; hideMessage('adminLoginMessage'); renderLocalProfileCount(); } else setMessage('adminLoginMessage', 'パスコードが違います。', 'error'); }
+    async function showAdminCode() { const date = $('adminDate').value; if (!date) return; $('adminCode').textContent = await participationCode(date); $('adminCode').classList.remove('hidden'); }
+    function generateQr() {
+      const url = $('qrUrl').value.trim(); hideMessage('qrMessage');
+      if (!/^https?:\/\/[^\s]+$/i.test(url)) { setMessage('qrMessage', 'https:// または http:// から始まるURLを入力してください。', 'error'); return; }
+      try { qrCanvas = document.createElement('canvas'); QRCode.render(url, qrCanvas, { scale: 7, quiet: 4, foreground:'#111827', background:'#ffffff' }); const output = $('qrOutput'); output.innerHTML=''; output.appendChild(qrCanvas); $('downloadQrButton').classList.remove('hidden'); }
+      catch (error) { setMessage('qrMessage', error.message === 'QR_URL_TOO_LONG' ? 'URLが長すぎます。短いURLをご利用ください。' : 'QRコードを生成できませんでした。', 'error'); }
+    }
+    function downloadQr() { if (!qrCanvas) return; const a=document.createElement('a'); a.download='aloha-saturday-stamp-card-qr.png'; a.href=qrCanvas.toDataURL('image/png'); a.click(); }
+
+    function isStandalone() { return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true; }
+    function setupInstallBanner() {
+      if (isStandalone() || localStorage.getItem(DISMISS_KEY) === '1') return;
+      const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+      const show = () => $('installBanner').classList.remove('hidden');
+      if (isIOS) { $('installText').textContent = 'Safariの共有ボタン →「ホーム画面に追加」で、次回からアプリのように開けます。'; $('installButton').textContent='手順を見る'; $('installButton').onclick=()=>alert('Safari下部の共有ボタンを押し、「ホーム画面に追加」を選択してください。'); show(); return; }
+      window.addEventListener('beforeinstallprompt', event => { event.preventDefault(); deferredInstallPrompt=event; show(); });
+      setTimeout(() => { if (!isStandalone() && !localStorage.getItem(DISMISS_KEY)) { if (!deferredInstallPrompt) $('installText').textContent='ブラウザメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。'; show(); } }, 1400);
+    }
+    async function installApp() { if (deferredInstallPrompt) { deferredInstallPrompt.prompt(); await deferredInstallPrompt.userChoice; deferredInstallPrompt=null; $('installBanner').classList.add('hidden'); } else alert('ブラウザのメニューから「アプリをインストール」または「ホーム画面に追加」を選択してください。'); }
+    function configureBrandAssets() {
+      if (!CUSTOM_LOGO_DATA_URI) return;
+      const link = document.querySelector('link[rel="apple-touch-icon"]'); if (link) link.href = CUSTOM_LOGO_DATA_URI;
+      const manifestLink = document.querySelector('link[rel="manifest"]');
+      if (manifestLink) { const m = { name:'ALOHA SATURDAY STAMP CARD', short_name:'ALOHA STAMP', start_url:'./aloha-stamp-card.html', scope:'./', display:'standalone', background_color:'#f4e8d0', theme_color:'#075b62', icons:[{src:CUSTOM_LOGO_DATA_URI,sizes:'any',type:CUSTOM_LOGO_DATA_URI.startsWith('data:image/png')?'image/png':'image/svg+xml',purpose:'any maskable'}] }; manifestLink.href='data:application/manifest+json;charset=UTF-8,'+encodeURIComponent(JSON.stringify(m)); }
+    }
+
+    $('startButton').addEventListener('click', () => startOrRestore('start'));
+    $('restoreButton').addEventListener('click', () => startOrRestore('restore'));
+    $('openAdminButton').addEventListener('click', showAdmin);
+    $('stampButton').addEventListener('click', receiveStamp);
+    $('switchUserButton').addEventListener('click', () => { profile=null; $('nicknameInput').value=''; showWelcome(); });
+    $('adminLoginButton').addEventListener('click', loginAdmin);
+    $('showCodeButton').addEventListener('click', showAdminCode);
+    $('refreshProfileCountButton').addEventListener('click', renderLocalProfileCount);
+    $('makeQrButton').addEventListener('click', generateQr);
+    $('downloadQrButton').addEventListener('click', downloadQr);
+    $('backButton').addEventListener('click', () => profile ? renderParticipant() : showWelcome());
+    $('participationCode').addEventListener('input', event => { event.target.value = event.target.value.replace(/[^a-z0-9]/gi,'').slice(0,6).toUpperCase(); });
+    $('installButton').addEventListener('click', installApp);
+    $('dismissInstallButton').addEventListener('click', () => { localStorage.setItem(DISMISS_KEY,'1'); $('installBanner').classList.add('hidden'); });
+    configureBrandAssets();
+    const lastNickname = localStorage.getItem(PROFILE_LAST_KEY); if (lastNickname) { const saved=loadProfile(lastNickname); if (saved) { profile=saved; renderParticipant(); } }
+    setupInstallBanner();
+  </script>
+</body>
+</html>
