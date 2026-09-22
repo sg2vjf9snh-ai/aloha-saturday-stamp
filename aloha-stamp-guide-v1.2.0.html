@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075b62">
+  <title>ALOHA SATURDAY STAMP CARD｜使い方ガイド</title>
+  <style>
+    :root { --teal:#075b62; --dark:#153e42; --coral:#e97868; --yellow:#f4c85b; --sand:#f4e8d0; --paper:#fffdf7; --ink:#19383b; --line:#d8c9ad; }
+    * { box-sizing:border-box; }
+    @page { size:A4 portrait; margin:0; }
+    html,body { margin:0; background:#cfc7b9; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; }
+    body { padding:24px; }
+    .controls { max-width:794px; margin:0 auto 16px; padding:14px; border-radius:12px; background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.12); }
+    .controls h1 { margin:0 0 8px; color:var(--teal); font:700 18px Georgia,serif; }
+    .controls p { margin:4px 0 10px; font-size:12px; }
+    .controls-row { display:flex; gap:8px; align-items:center; }
+    .controls input { min-width:0; flex:1; min-height:40px; padding:8px 10px; border:2px solid var(--line); border-radius:8px; font-size:14px; }
+    .controls button { min-height:40px; border:0; border-radius:999px; padding:8px 15px; color:#fff; background:var(--coral); font-weight:800; cursor:pointer; }
+    .controls .hint { margin-top:8px; color:#6b6d63; font-size:11px; }
+    .sheet { width:210mm; min-height:297mm; max-width:100%; margin:0 auto; padding:12mm; overflow:hidden; background:var(--paper); box-shadow:0 8px 30px rgba(0,0,0,.18); }
+    .masthead { position:relative; overflow:hidden; display:grid; grid-template-columns:70px 1fr; gap:14px; align-items:center; padding:15px 18px 17px; border-radius:16px 16px 5px 5px; color:var(--paper); background:var(--teal); }
+    .masthead:after { content:""; position:absolute; width:220px; height:65px; right:-54px; bottom:-21px; border:2px solid rgba(255,255,255,.25); border-radius:50%; transform:rotate(-9deg); }
+    .logo-box { position:relative; z-index:1; display:grid; place-items:center; width:64px; height:64px; border-radius:13px; color:var(--teal); background:var(--yellow); font:800 17px Georgia,serif; line-height:1; text-align:center; }
+    .masthead .eyebrow { position:relative; z-index:1; margin:0 0 4px; font-size:10px; font-weight:900; letter-spacing:.14em; }
+    .masthead h1 { position:relative; z-index:1; margin:0; color:var(--yellow); font:700 29px/1.04 Georgia,"Times New Roman",serif; letter-spacing:.06em; }
+    .masthead .sub { position:relative; z-index:1; margin:6px 0 0; font-size:12px; font-weight:800; letter-spacing:.1em; }
+    .masthead .place { position:relative; z-index:1; margin:5px 0 0; color:#fff5e3; font-size:10px; }
+    .lead { margin:11px 0 0; color:var(--teal); text-align:center; font:700 15px Georgia,"Hiragino Mincho ProN",serif; }
+    .qr-panel { display:grid; grid-template-columns:155px 1fr; gap:22px; align-items:center; margin-top:9px; padding:14px 16px; border:1px solid var(--line); border-radius:12px; background:#fff8e8; }
+    .qr-frame { display:grid; place-items:center; min-height:145px; padding:7px; background:#fff; }
+    .qr-frame canvas { width:145px; height:145px; image-rendering:pixelated; }
+    .qr-copy h2, .section-title { margin:0; color:var(--teal); font:700 20px Georgia,"Times New Roman",serif; }
+    .qr-copy p { margin:7px 0; font-size:13px; line-height:1.55; }
+    .qr-url { overflow-wrap:anywhere; color:#6f746d; font-size:9px; }
+    .steps { margin-top:11px; }
+    .steps-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+    .step { display:grid; grid-template-columns:35px 1fr; gap:8px; align-items:center; min-height:63px; padding:8px 10px; border:1px solid #e2d5bd; border-radius:10px; background:#fffaf0; }
+    .step:last-child { grid-column:1 / -1; }
+    .step-no { display:grid; place-items:center; width:31px; height:31px; border-radius:50%; color:var(--paper); background:var(--coral); font-weight:900; font-size:13px; }
+    .step-icon { float:right; width:26px; height:26px; margin-left:4px; color:var(--teal); }
+    .step h3 { margin:0; color:var(--teal); font-size:13px; }
+    .step p { margin:2px 0 0; font-size:10.5px; line-height:1.4; }
+    .benefits { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:11px; }
+    .benefit { padding:10px 8px; border-radius:10px; text-align:center; background:var(--teal); color:var(--paper); }
+    .benefit strong { display:block; color:var(--yellow); font:700 18px Georgia,serif; }
+    .benefit span { font-size:10px; line-height:1.35; }
+    .tips { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:11px; }
+    .tip { padding:10px 12px; border-left:4px solid var(--yellow); border-radius:7px; background:#fff4cf; }
+    .tip h3 { margin:0 0 4px; color:var(--teal); font-size:13px; }
+    .tip p { margin:0; font-size:10px; line-height:1.5; }
+    .footer { display:flex; justify-content:space-between; gap:10px; align-items:flex-end; margin-top:11px; padding-top:8px; border-top:1px solid var(--line); color:#767364; font-size:9px; }
+    .footer strong { color:var(--teal); }
+    .error { display:none; margin-top:8px; color:#9a3f34; font-size:11px; font-weight:700; }
+    @media (max-width:750px) { body { padding:10px; } .sheet { padding:7mm; } .qr-panel { grid-template-columns:135px 1fr; gap:12px; } .qr-frame canvas { width:125px; height:125px; } }
+    @media print { body { padding:0; background:#fff; } .controls { display:none; } .sheet { width:210mm; min-height:297mm; max-width:none; box-shadow:none; } }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <h1>印刷前のQR設定</h1>
+    <p>アプリをHTTPSで公開したURLを入力してください。アプリとこのガイドを同じフォルダに置いた場合は、自動推定できます。</p>
+    <div class="controls-row"><input id="urlInput" type="url" placeholder="https://example.com/aloha-stamp-card.html"><button id="applyUrl">QRを更新</button><button id="printButton">印刷 / PDF</button></div>
+    <div class="hint">QRコードは外部サービスを使わず、このページ内のJavaScriptで生成します。実寸で読み取りテストをしてから配布してください。</div>
+  </div>
+
+  <main class="sheet">
+    <header class="masthead">
+      <div class="logo-box">RR<br><small style="font:700 7px Arial,sans-serif;letter-spacing:.06em">ALOHA</small></div>
+      <div><p class="eyebrow">RUNNERS ROUTE JP</p><h1>ALOHA SATURDAY</h1><p class="sub">DIGITAL STAMP CARD</p><p class="place">清澄白河 808FIVE-DONUTS｜Every Saturday Morning</p></div>
+    </header>
+    <p class="lead">土曜の朝、ハワイへ向かう小さなパスポート。</p>
+
+    <section class="qr-panel">
+      <div class="qr-frame" id="qrFrame"><span style="font-size:10px;color:#777;text-align:center">公開URLを入力すると<br>QRコードが表示されます</span></div>
+      <div class="qr-copy"><h2>まずはスマホで読み取ってね</h2><p>カメラまたはQRリーダーで読み取り、ALOHA SATURDAY STAMP CARDを開きます。</p><p class="qr-url" id="shownUrl"></p><div id="qrError" class="error"></div></div>
+    </section>
+
+    <section class="steps"><h2 class="section-title">HOW TO USE｜5 STEPS</h2><div class="steps-grid">
+      <article class="step"><div class="step-no">01</div><div><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"/></svg><h3>QRコードを読み取る</h3><p>上のQRから参加登録ページを開きます。</p></div></article>
+      <article class="step"><div class="step-no">02</div><div><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8 17c.8-2 2.1-3 4-3s3.2 1 4 3"/></svg><h3>ニックネームを登録</h3><p>ニックネームだけ入力してカードを開始。</p></div></article>
+      <article class="step"><div class="step-no">03</div><div><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="12" r="3"/><path d="M11 12h10M17 12v3M20 12v2"/></svg><h3>参加コードを入力</h3><p>会場で発表される本日の6文字コードを入力します。</p></div></article>
+      <article class="step"><div class="step-no">04</div><div><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="M7 8h10M7 12h7M7 16h5"/></svg><h3>ハワイのスタンプを貯める</h3><p>ホヌ、虹、ハイビスカスなどがランダムに押されます。</p></div></article>
+      <article class="step"><div class="step-no">05</div><div><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10 5h4M9 18h6"/><path d="M3 10v4M3 10l2 2M3 10l-2 2"/></svg><h3>ホーム画面に追加</h3><p>iPhoneは共有ボタン→「ホーム画面に追加」。Androidは「インストール」または「ホーム画面に追加」。</p></div></article>
+    </div></section>
+
+    <section class="benefits"><div class="benefit"><strong>3〜5</strong><span>ステッカー<br>プレゼント</span></div><div class="benefit"><strong>10</strong><span>オリジナルグッズ<br>プレゼント</span></div><div class="benefit"><strong>20</strong><span>ハワイモチーフの<br>スタンプ</span></div></section>
+    <p style="margin:7px 0 0;color:#6f746d;text-align:center;font-size:10px">スタンプはホヌ、波、プルメリアなど全20種類からランダムで押されます。</p>
+    <section class="tips"><div class="tip"><h3>ニックネームについて</h3><p>本名、メールアドレス、電話番号などの個人情報は入力しないでください。記録は利用端末のブラウザ内に保存されます。</p></div><div class="tip"><h3>次回もすぐ使うには</h3><p>ホーム画面に追加しておくと、QRコードを再度探さなくてもアプリのように開けます。</p></div></section>
+    <footer class="footer"><span>RUNNERS ROUTE JP｜清澄白河 808FIVE-DONUTS<br>ALOHA SATURDAY RUNNING COMMUNITY</span><strong>v1.2.0</strong></footer>
+  </main>
+
+  <script>
+    'use strict';
+    /* Self-contained QR Code generator (QR Model 2, byte mode, ECC-L, versions 1-9). */
+const QRCode = (() => {
+  const SPECS = {
+    1: { total: 26, ec: 7, groups: [[1, 19]] },
+    2: { total: 44, ec: 10, groups: [[1, 34]] },
+    3: { total: 70, ec: 15, groups: [[1, 55]] },
+    4: { total: 100, ec: 20, groups: [[1, 80]] },
+    5: { total: 134, ec: 26, groups: [[1, 108]] },
+    6: { total: 172, ec: 18, groups: [[2, 68]] },
+    7: { total: 196, ec: 20, groups: [[2, 78]] },
+    8: { total: 242, ec: 24, groups: [[2, 97]] },
+    9: { total: 292, ec: 30, groups: [[2, 116]] }
+  };
+  const ALIGNMENT = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46]];
+
+  function bchDigit(data) {
+    let digit = 0;
+    while (data !== 0) { digit++; data >>>= 1; }
+    return digit;
+  }
+  function bchTypeInfo(data) {
+    let d = data << 10;
+    const g = 0x537;
+    while (bchDigit(d) >= bchDigit(g)) d ^= g << (bchDigit(d) - bchDigit(g));
+    return ((data << 10) | d) ^ 0x5412;
+  }
+  function bchVersion(data) {
+    let d = data << 12;
+    const g = 0x1f25;
+    while (bchDigit(d) >= bchDigit(g)) d ^= g << (bchDigit(d) - bchDigit(g));
+    return (data << 12) | d;
+  }
+  function gfMul(x, y) {
+    let z = 0;
+    while (y) {
+      if (y & 1) z ^= x;
+      y >>>= 1;
+      x <<= 1;
+      if (x & 0x100) x ^= 0x11d;
+      x &= 0xff;
+    }
+    return z;
+  }
+  function gfPow2(exp) {
+    let z = 1;
+    for (let i = 0; i < exp; i++) z = gfMul(z, 2);
+    return z;
+  }
+  function rsGenerator(degree) {
+    let poly = [1];
+    for (let i = 0; i < degree; i++) {
+      const next = new Array(poly.length + 1).fill(0);
+      const alpha = gfPow2(i);
+      for (let j = 0; j < poly.length; j++) {
+        next[j] ^= poly[j];
+        next[j + 1] ^= gfMul(poly[j], alpha);
+      }
+      poly = next;
+    }
+    return poly;
+  }
+  function rsRemainder(data, degree) {
+    const gen = rsGenerator(degree);
+    const rem = new Array(degree).fill(0);
+    for (const value of data) {
+      const factor = value ^ rem[0];
+      rem.shift();
+      rem.push(0);
+      for (let i = 0; i < degree; i++) rem[i] ^= gfMul(gen[i + 1], factor);
+    }
+    return rem;
+  }
+  function appendBits(bits, value, length) {
+    for (let i = length - 1; i >= 0; i--) bits.push((value >>> i) & 1);
+  }
+  function bytesFromText(text) {
+    return Array.from(new TextEncoder().encode(text));
+  }
+  function createCodewords(version, dataBytes) {
+    const spec = SPECS[version];
+    const dataCapacity = spec.groups.reduce((sum, group) => sum + group[0] * group[1], 0);
+    const countBits = version <= 9 ? 8 : 16;
+    const bits = [];
+    appendBits(bits, 0b0100, 4);
+    appendBits(bits, dataBytes.length, countBits);
+    for (const byte of dataBytes) appendBits(bits, byte, 8);
+    if (bits.length > dataCapacity * 8) throw new Error('QR_DATA_TOO_LONG');
+    appendBits(bits, 0, Math.min(4, dataCapacity * 8 - bits.length));
+    while (bits.length % 8) bits.push(0);
+    const data = [];
+    for (let i = 0; i < bits.length; i += 8) {
+      let value = 0;
+      for (let j = 0; j < 8; j++) value = (value << 1) | bits[i + j];
+      data.push(value);
+    }
+    let pad = 0;
+    while (data.length < dataCapacity) data.push((pad++ % 2) ? 0x11 : 0xec);
+
+    const blocks = [];
+    let offset = 0;
+    for (const [count, dataCount] of spec.groups) {
+      for (let i = 0; i < count; i++) {
+        const blockData = data.slice(offset, offset + dataCount);
+        offset += dataCount;
+        blocks.push({ data: blockData, ecc: rsRemainder(blockData, spec.ec) });
+      }
+    }
+    const result = [];
+    const maxData = Math.max(...blocks.map(block => block.data.length));
+    const maxEcc = Math.max(...blocks.map(block => block.ecc.length));
+    for (let i = 0; i < maxData; i++) for (const block of blocks) if (i < block.data.length) result.push(block.data[i]);
+    for (let i = 0; i < maxEcc; i++) for (const block of blocks) if (i < block.ecc.length) result.push(block.ecc[i]);
+    if (result.length !== spec.total) throw new Error('QR_BLOCK_LENGTH');
+    return result;
+  }
+  function maskBit(mask, row, col) {
+    switch (mask) {
+      case 0: return (row + col) % 2 === 0;
+      case 1: return row % 2 === 0;
+      case 2: return col % 3 === 0;
+      case 3: return (row + col) % 3 === 0;
+      case 4: return (Math.floor(row / 2) + Math.floor(col / 3)) % 2 === 0;
+      case 5: return (row * col) % 2 + (row * col) % 3 === 0;
+      case 6: return ((row * col) % 2 + (row * col) % 3) % 2 === 0;
+      case 7: return ((row + col) % 2 + (row * col) % 3) % 2 === 0;
+      default: throw new Error('QR_MASK');
+    }
+  }
+  function makeMatrix(version, codewords, mask) {
+    const size = version * 4 + 17;
+    const modules = Array.from({ length: size }, () => Array(size).fill(false));
+    const isFunction = Array.from({ length: size }, () => Array(size).fill(false));
+    const setFunction = (row, col, dark) => {
+      if (row >= 0 && row < size && col >= 0 && col < size) {
+        modules[row][col] = !!dark;
+        isFunction[row][col] = true;
+      }
+    };
+    const finder = (row, col) => {
+      for (let dy = -1; dy <= 7; dy++) {
+        for (let dx = -1; dx <= 7; dx++) {
+          const r = row + dy, c = col + dx;
+          const dark = (0 <= dy && dy <= 6 && (dx === 0 || dx === 6)) ||
+            (0 <= dx && dx <= 6 && (dy === 0 || dy === 6)) ||
+            (2 <= dy && dy <= 4 && 2 <= dx && dx <= 4);
+          setFunction(r, c, dark);
+        }
+      }
+    };
+    finder(0, 0); finder(size - 7, 0); finder(0, size - 7);
+    for (let i = 8; i < size - 8; i++) {
+      if (!isFunction[6][i]) setFunction(6, i, i % 2 === 0);
+      if (!isFunction[i][6]) setFunction(i, 6, i % 2 === 0);
+    }
+    const positions = ALIGNMENT[version - 1];
+    for (const row of positions) for (const col of positions) {
+      if (isFunction[row][col]) continue;
+      for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++)
+        setFunction(row + dy, col + dx, Math.max(Math.abs(dx), Math.abs(dy)) !== 1);
+    }
+    for (let i = 0; i < 15; i++) {
+      if (i < 6) setFunction(i, 8, false);
+      else if (i < 8) setFunction(i + 1, 8, false);
+      else setFunction(size - 15 + i, 8, false);
+      if (i < 8) setFunction(8, size - i - 1, false);
+      else if (i < 9) setFunction(8, 15 - i, false);
+      else setFunction(8, 15 - i - 1, false);
+    }
+    setFunction(size - 8, 8, true);
+    if (version >= 7) {
+      const bits = bchVersion(version);
+      for (let i = 0; i < 18; i++) {
+        const bit = ((bits >>> i) & 1) !== 0;
+        setFunction(Math.floor(i / 3), i % 3 + size - 11, bit);
+        setFunction(i % 3 + size - 11, Math.floor(i / 3), bit);
+      }
+    }
+    const dataBits = [];
+    for (const byte of codewords) appendBits(dataBits, byte, 8);
+    let bitIndex = 0;
+    let upward = true;
+    for (let right = size - 1; right >= 1; right -= 2) {
+      if (right === 6) right--;
+      for (let vert = 0; vert < size; vert++) {
+        const row = upward ? size - 1 - vert : vert;
+        for (let j = 0; j < 2; j++) {
+          const col = right - j;
+          if (!isFunction[row][col]) {
+            let dark = bitIndex < dataBits.length ? dataBits[bitIndex++] === 1 : false;
+            if (maskBit(mask, row, col)) dark = !dark;
+            modules[row][col] = dark;
+          }
+        }
+      }
+      upward = !upward;
+    }
+    const format = bchTypeInfo((1 << 3) | mask); // ECC-L is 01.
+    for (let i = 0; i < 15; i++) {
+      const bit = ((format >>> i) & 1) !== 0;
+      if (i < 6) modules[i][8] = bit;
+      else if (i < 8) modules[i + 1][8] = bit;
+      else modules[size - 15 + i][8] = bit;
+      if (i < 8) modules[8][size - i - 1] = bit;
+      else if (i < 9) modules[8][15 - i] = bit;
+      else modules[8][15 - i - 1] = bit;
+    }
+    return modules;
+  }
+  function penalty(matrix) {
+    const size = matrix.length;
+    let score = 0;
+    const addRuns = line => {
+      let runColor = line[0], runLength = 1;
+      for (let i = 1; i < line.length; i++) {
+        if (line[i] === runColor) runLength++;
+        else { if (runLength >= 5) score += 3 + runLength - 5; runColor = line[i]; runLength = 1; }
+      }
+      if (runLength >= 5) score += 3 + runLength - 5;
+    };
+    for (let r = 0; r < size; r++) addRuns(matrix[r]);
+    for (let c = 0; c < size; c++) addRuns(matrix.map(row => row[c]));
+    for (let r = 0; r < size - 1; r++) for (let c = 0; c < size - 1; c++) {
+      const v = matrix[r][c];
+      if (v === matrix[r + 1][c] && v === matrix[r][c + 1] && v === matrix[r + 1][c + 1]) score += 3;
+    }
+    const finderLike = line => {
+      for (let i = 0; i <= line.length - 11; i++) {
+        const a = line.slice(i, i + 11);
+        const before = a.slice(0, 4).every(v => !v);
+        const after = a.slice(7, 11).every(v => !v);
+        const core = a.slice(4, 7).every(v => v);
+        if (core && !a[3] && !a[7] && ((before) || (after))) score += 40;
+      }
+    };
+    for (let r = 0; r < size; r++) finderLike(matrix[r]);
+    for (let c = 0; c < size; c++) finderLike(matrix.map(row => row[c]));
+    let dark = 0;
+    for (const row of matrix) for (const cell of row) if (cell) dark++;
+    score += Math.floor(Math.abs(dark * 20 - size * size * 10) / (size * size)) * 10;
+    return score;
+  }
+  function make(text) {
+    const dataBytes = bytesFromText(text);
+    let version = 1;
+    for (; version <= 9; version++) {
+      const capacity = SPECS[version].groups.reduce((sum, group) => sum + group[0] * group[1], 0);
+      if (4 + 8 + dataBytes.length * 8 <= capacity * 8) break;
+    }
+    if (version > 9) throw new Error('QR_URL_TOO_LONG');
+    const codewords = createCodewords(version, dataBytes);
+    let best = null, bestScore = Infinity;
+    for (let mask = 0; mask < 8; mask++) {
+      const matrix = makeMatrix(version, codewords, mask);
+      const score = penalty(matrix);
+      if (score < bestScore) { bestScore = score; best = matrix; }
+    }
+    return best;
+  }
+  function render(text, canvas, options = {}) {
+    const matrix = make(text);
+    const scale = options.scale || 6;
+    const quiet = options.quiet == null ? 4 : options.quiet;
+    const size = matrix.length;
+    canvas.width = canvas.height = (size + quiet * 2) * scale;
+    const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = options.background || '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = options.foreground || '#111827';
+    for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
+      if (matrix[r][c]) ctx.fillRect((c + quiet) * scale, (r + quiet) * scale, scale, scale);
+    }
+    return canvas;
+  }
+  return { render };
+})();
+    const input = document.getElementById('urlInput');
+    const qrFrame = document.getElementById('qrFrame');
+    const shownUrl = document.getElementById('shownUrl');
+    const error = document.getElementById('qrError');
+    function inferUrl() {
+      const params = new URLSearchParams(location.search);
+      const fromQuery = params.get('url');
+      if (fromQuery) return fromQuery;
+      if (/^https?:$/i.test(location.protocol)) return new URL('aloha-stamp-card.html', location.href).href;
+      return '';
+    }
+    function updateQr() {
+      const url = input.value.trim(); error.style.display='none'; shownUrl.textContent='';
+      if (!url || !/^https?:\/\/[^\s]+$/i.test(url)) { qrFrame.innerHTML='<span style="font-size:10px;color:#777;text-align:center">公開URLを入力すると<br>QRコードが表示されます</span>'; if (url) { error.textContent='https:// または http:// から始まるURLを入力してください。'; error.style.display='block'; } return; }
+      try { const canvas=document.createElement('canvas'); QRCode.render(url, canvas, {scale:5, quiet:4, foreground:'#111827', background:'#ffffff'}); qrFrame.innerHTML=''; qrFrame.appendChild(canvas); shownUrl.textContent=url; } catch (e) { qrFrame.innerHTML='<span style="font-size:10px;color:#777">QRを生成できません</span>'; error.textContent=e.message==='QR_URL_TOO_LONG'?'URLが長すぎます。短いURLをご利用ください。':'QRコード生成に失敗しました。'; error.style.display='block'; }
+    }
+    input.value = inferUrl(); updateQr();
+    document.getElementById('applyUrl').addEventListener('click', updateQr);
+    input.addEventListener('keydown', event => { if (event.key==='Enter') updateQr(); });
+    document.getElementById('printButton').addEventListener('click', () => { if (!input.value.trim()) { alert('先に公開URLを入力してください。'); return; } window.print(); });
+  </script>
+</body>
+</html>
