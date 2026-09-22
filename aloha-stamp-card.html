@@ -125,7 +125,7 @@
   <svg aria-hidden="true" width="0" height="0" style="position:absolute"><defs><filter id="stampWobble"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="17" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="1.35" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg>
   <main class="app-shell">
     <header class="brand-cover">
-      <p class="brand-kicker">RUNNER'S ROUTE JP</p>
+      <p class="brand-kicker">RUNNERS ROUTE JP</p>
       <h1>ALOHA SATURDAY</h1>
       <div class="brand-subtitle">DIGITAL STAMP CARD</div>
       <p class="brand-location">清澄白河 808FIVE-DONUTS</p>
@@ -146,7 +146,7 @@
         </div>
         <div id="welcomeMessage" class="status-message hidden" role="status" aria-live="polite"></div>
       </div>
-      <div class="app-footer">ALOHA SATURDAY STAMP CARD · <strong>v1.1.0</strong></div>
+      <div class="app-footer">ALOHA SATURDAY STAMP CARD · <strong>v1.2.0</strong></div>
     </section>
 
     <section id="participantView" class="view hidden">
@@ -175,7 +175,7 @@
         <div id="rewardList" class="reward-list"></div>
       </div>
       <button id="switchUserButton" class="btn btn-secondary">別のニックネームに切り替える</button>
-      <div class="app-footer">RUNNER'S ROUTE JP · <strong>ALOHA SATURDAY STAMP CARD v1.1.0</strong></div>
+      <div class="app-footer">RUNNERS ROUTE JP · <strong>ALOHA SATURDAY STAMP CARD v1.2.0</strong></div>
     </section>
 
     <section id="adminView" class="view hidden">
@@ -196,6 +196,7 @@
         <button id="showCodeButton" class="btn btn-yellow">この日のコードを表示</button>
         <div id="adminCode" class="code-display hidden" aria-live="polite"></div>
         <div class="admin-tip">参加コードは「秘密の合言葉 + | + 日付（YYYY-MM-DD）」をSHA-256化し、先頭6文字を大文字にしたものです。</div>
+        <div class="admin-tip" style="margin-top:12px"><strong>登録人数（この端末）</strong><div id="localProfileCount" style="margin:4px 0;color:var(--teal);font-size:26px;font-weight:900">0人</div><div>この人数は主催者の端末・同じブラウザ内に保存されたプロフィール数です。参加者全体の人数ではありません。</div><button id="refreshProfileCountButton" class="btn btn-secondary btn-small" style="margin-top:8px">人数を更新</button></div>
 
         <h2 style="margin-top:22px">参加登録QRコード</h2>
         <p class="small">現在のページURLが初期入力されます。別のURLを入力して作り直すこともできます。</p>
@@ -207,7 +208,7 @@
         <button id="downloadQrButton" class="btn btn-secondary hidden">QR画像をダウンロード</button>
       </div>
       <button id="backButton" class="btn btn-secondary">参加者画面に戻る</button>
-      <div class="app-footer">ORGANIZER VIEW · <strong>ALOHA SATURDAY STAMP CARD v1.1.0</strong></div>
+      <div class="app-footer">ORGANIZER VIEW · <strong>ALOHA SATURDAY STAMP CARD v1.2.0</strong></div>
     </section>
   </main>
 
@@ -495,7 +496,7 @@ const QRCode = (() => {
   return { render };
 })();
     'use strict';
-    const APP_VERSION = '1.1.0';
+    const APP_VERSION = '1.2.0';
     /*
       運用開始前に、以下2つは必ず主催者用の値へ変更してください。
       ※静的HTMLへ埋め込む以上、ソースを取得できる人には見えるため、金銭的価値の高い認証には使わないでください。
@@ -519,13 +520,27 @@ const QRCode = (() => {
       'Lv.9 ダイヤモンドヘッド・チャンピオン',
       'Lv.10 ホノルルマラソン・マスター'
     ];
-    const MOTIFS = [
+const MOTIFS = [
       { key:'turtle', label:'ホヌ', symbol:'🐢', color:'#075b62' },
       { key:'pineapple', label:'パイナップル', symbol:'🍍', color:'#e0a52b' },
       { key:'rainbow', label:'虹', symbol:'🌈', color:'#e97868' },
       { key:'hibiscus', label:'ハイビスカス', symbol:'🌺', color:'#e97868' },
       { key:'palm', label:'ヤシの木', symbol:'🌴', color:'#075b62' },
-      { key:'shaka', label:'シャカサイン', symbol:'🤙', color:'#e0a52b' }
+      { key:'shaka', label:'シャカサイン', symbol:'🤙', color:'#e0a52b' },
+      { key:'plumeria', label:'プルメリア', symbol:'🌼', color:'#e97868' },
+      { key:'hibiscus_leaf', label:'ハイビスカスの葉', symbol:'🍃', color:'#075b62' },
+      { key:'wave', label:'波', symbol:'🌊', color:'#075b62' },
+      { key:'sunrise', label:'朝日', symbol:'🌅', color:'#e97868' },
+      { key:'surfboard', label:'サーフボード', symbol:'🏄', color:'#e97868' },
+      { key:'canoe', label:'カヌー', symbol:'🛶', color:'#075b62' },
+      { key:'ukulele', label:'ウクレレ', symbol:'🎸', color:'#e0a52b' },
+      { key:'coconut', label:'ココナッツ', symbol:'🥥', color:'#075b62' },
+      { key:'whale_tail', label:'クジラの尾', symbol:'🐋', color:'#075b62' },
+      { key:'flamingo', label:'フラミンゴ', symbol:'🦩', color:'#e97868' },
+      { key:'running_shoes', label:'ランニングシューズ', symbol:'👟', color:'#e97868' },
+      { key:'route_map_pin', label:'ルートマップピン', symbol:'📍', color:'#e97868' },
+      { key:'tokyo_bridge', label:'東京の橋', symbol:'🌉', color:'#075b62' },
+      { key:'tropical_drink', label:'トロピカルドリンク', symbol:'🍹', color:'#e0a52b' }
     ];
     let profile = null;
     let deferredInstallPrompt = null;
@@ -560,7 +575,7 @@ const QRCode = (() => {
         palm: `<path d="M51 74V42M51 43c-9-9-17-9-25-6 6-8 16-11 25-5M51 42c7-11 16-14 25-12-6-7-15-10-24-4M51 43c-1-11-5-18-12-23 10 1 16 8 16 18M51 74l-10 7M51 74l12 7" fill="none" stroke="${color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`,
         shaka: `<path d="M42 67c-7-3-11-10-8-15l8-13c2-4 6-5 8-2l-5 10 3 2 9-20c2-4 6-4 8-1l-5 17 3 1 7-13c2-4 6-3 7 0l-7 18 3 1 5-7c2-3 6-1 6 2-3 9-8 18-16 22-7 4-14 3-21-2Z" fill="none" stroke="${color}" stroke-width="3" stroke-linejoin="round"/>`
       };
-      return `<svg viewBox="0 0 100 100" role="img" aria-label="${motif.label}のスタンプ（${date}）"><path d="M50 7c12-2 23 3 32 9 10 7 12 18 9 29 4 13-1 26-10 35-9 9-23 12-35 11-14 2-27-4-35-14-8-10-8-24-5-35C3 31 8 18 19 12 29 6 39 8 50 7Z" fill="#fff3c8" stroke="${color}" stroke-width="3" stroke-dasharray="2 2"/>${shapes[motif.key]}<text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="${color}">${motif.label}</text></svg>`;
+      return `<svg viewBox="0 0 100 100" role="img" aria-label="${motif.label}のスタンプ（${date}）"><path d="M50 7c12-2 23 3 32 9 10 7 12 18 9 29 4 13-1 26-10 35-9 9-23 12-35 11-14 2-27-4-35-14-8-10-8-24-5-35C3 31 8 18 19 12 29 6 39 8 50 7Z" fill="#fff3c8" stroke="${color}" stroke-width="3" stroke-dasharray="2 2"/>${shapes[motif.key] || `<text x="50" y="58" text-anchor="middle" font-size="34">${motif.symbol}</text>`}<text x="50" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="${color}">${motif.label}</text></svg>`;
     }
     function renderParticipant() {
       if (!profile) return;
@@ -584,9 +599,8 @@ const QRCode = (() => {
     function renderRewards(count) {
       const list = $('rewardList'); list.innerHTML = '';
       const rewards = [
-        { at:3, icon:'🌺', title:'3個達成', text:'オリジナルステッカーをプレゼント' },
-        { at:5, icon:'🎁', title:'5個達成', text:'オリジナルグッズ割引' },
-        { at:10, icon:'🏅', title:'10個達成', text:'Lv.10 ホノルルマラソン・マスター！' }
+        { at:3, icon:'🌺', title:'Lv.2｜3〜5個', text:'ステッカープレゼント' },
+        { at:10, icon:'🎁', title:'10個達成', text:'オリジナルグッズプレゼント｜Lv.10 ホノルルマラソン・マスター！' }
       ];
       rewards.forEach(reward => {
         const achieved = count >= reward.at;
@@ -625,9 +639,19 @@ const QRCode = (() => {
       else if (count === 3) setMessage('participantMessage', `🌺 ${motif.symbol} ${motif.label}のスタンプを受け取りました。3個達成特典が解放されました！`, 'success');
       else setMessage('participantMessage', `${motif.symbol} ${motif.label}のスタンプを受け取りました！`, 'success');
     }
+    function countLocalProfiles() {
+      let count = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key || !key.startsWith(STORAGE_PREFIX + '.profile.')) continue;
+        try { const saved = JSON.parse(localStorage.getItem(key)); if (saved && saved.nickname) count++; } catch (_) {}
+      }
+      return count;
+    }
+    function renderLocalProfileCount() { const el = $('localProfileCount'); if (el) el.textContent = `${countLocalProfiles()}人`; }
     function showAdmin() { $('welcomeView').classList.add('hidden'); $('participantView').classList.add('hidden'); $('adminView').classList.remove('hidden'); $('adminDate').value = getJapanDateString(); $('qrUrl').value = (/^https?:$/i.test(location.protocol) ? location.href : ''); hideMessage('adminLoginMessage'); }
     function showWelcome() { $('adminView').classList.add('hidden'); $('participantView').classList.add('hidden'); $('welcomeView').classList.remove('hidden'); }
-    async function loginAdmin() { if ($('adminPasscode').value === ADMIN_PASSCODE) { $('adminPanel').classList.remove('hidden'); $('adminPasscode').value=''; hideMessage('adminLoginMessage'); } else setMessage('adminLoginMessage', 'パスコードが違います。', 'error'); }
+    async function loginAdmin() { if ($('adminPasscode').value === ADMIN_PASSCODE) { $('adminPanel').classList.remove('hidden'); $('adminPasscode').value=''; hideMessage('adminLoginMessage'); renderLocalProfileCount(); } else setMessage('adminLoginMessage', 'パスコードが違います。', 'error'); }
     async function showAdminCode() { const date = $('adminDate').value; if (!date) return; $('adminCode').textContent = await participationCode(date); $('adminCode').classList.remove('hidden'); }
     function generateQr() {
       const url = $('qrUrl').value.trim(); hideMessage('qrMessage');
@@ -661,6 +685,7 @@ const QRCode = (() => {
     $('switchUserButton').addEventListener('click', () => { profile=null; $('nicknameInput').value=''; showWelcome(); });
     $('adminLoginButton').addEventListener('click', loginAdmin);
     $('showCodeButton').addEventListener('click', showAdminCode);
+    $('refreshProfileCountButton').addEventListener('click', renderLocalProfileCount);
     $('makeQrButton').addEventListener('click', generateQr);
     $('downloadQrButton').addEventListener('click', downloadQr);
     $('backButton').addEventListener('click', () => profile ? renderParticipant() : showWelcome());
